@@ -1,10 +1,10 @@
-import { Head } from "../components"
+import { Head, Map } from "../components"
 
 function Home() {
     return (
         <div>
             <Head title="Home" description="Home page" />
-            Home
+            <Map />
         </div>
     )
 }
