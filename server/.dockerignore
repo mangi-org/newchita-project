@@ -1,0 +1,7 @@
+venv/
+.git/
+.gitignore
+node_modules/
+dist/
+build/
+# .env
