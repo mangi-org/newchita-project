@@ -18,7 +18,7 @@ services:
       - ".env"
     environment:
       - PYTHONUNBUFFERED=1
-      - POSTGRES_HOST=${POSTGRES_HOST}
+      - POSTGRES_HOST=database 
       - POSTGRES_PORT=${POSTGRES_PORT}
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
@@ -30,6 +30,8 @@ services:
       - DJANGO_DEBUG=${DJANGO_DEBUG}
     ports:
       - "5001:8000"
+    volumes:
+      - ./server/media:/media
     depends_on:
       - database
 
@@ -45,3 +47,4 @@ services:
 
 volumes:
   data:
+  media:
