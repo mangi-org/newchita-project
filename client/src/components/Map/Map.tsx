@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import StateMapInterface from './interface';
 import { getArrayAboutProject } from '../../axios';
 import BallonCard from './BallonCard';
+import './Map.css'
 
 
 function MapComponent() {
@@ -13,6 +14,14 @@ function MapComponent() {
         zoom: 15,
         controls: ["zoomControl"],
     };
+
+    useEffect(() => {
+        document.body.classList.add('map');
+
+        return () => {
+            document.body.classList.remove('map');
+        }
+    }, [])
 
     useEffect(() => {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
