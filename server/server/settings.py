@@ -114,13 +114,11 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": POSTGRESQL_DB,
-        "OPTIONS": {
-            "host": POSTGRESQL_HOST,
-            "port": POSTGRESQL_PORT,
-            "user": POSTGRESQL_USER,
-            "password": POSTGRESQL_PASSWORD
-        },
-    }
+        "HOST": POSTGRESQL_HOST,
+        "PORT": POSTGRESQL_PORT,
+        "USER": POSTGRESQL_USER,
+        "PASSWORD": POSTGRESQL_PASSWORD,
+    },
 }
 
 AUTH_PASSWORD_VALIDATORS = [

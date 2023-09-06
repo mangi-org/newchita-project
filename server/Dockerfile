@@ -28,7 +28,7 @@ ENV DJANGO_DEBUG=${DJANGO_DEBUG}
 # RUN python manage.py makemigrations
 # RUN python manage.py migrate 
 # RUN python manage.py initadmin
-# RUN python manage.py collectstatic --noinput
+RUN python manage.py collectstatic --noinput
 
 # Устанавливаем Unicorn
 RUN pip install gunicorn
@@ -36,3 +36,6 @@ RUN pip install gunicorn
 EXPOSE 8000
 
 CMD ["gunicorn", "--workers", "4", "--timeout", "1000", "server.wsgi:application", "--bind", "0.0.0.0:8000"]
+
+VOLUME [ "/media" ]
+VOLUME [ "/static" ]

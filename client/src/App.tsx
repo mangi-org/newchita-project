@@ -10,7 +10,7 @@ function App() {
   return (
     <Provider store={store}>
       <HelmetProvider>
-        <Router>
+        <Router basename='/'>
           <Layout>
             <PagesRouter />
           </Layout>

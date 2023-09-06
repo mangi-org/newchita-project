@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    overflow-y: hidden;
+body {
+  overflow-y: hidden;
+}
+
+.ymaps-2-1-79-balloon {
+    box-shadow: none !important;
+}
+
+.ymaps-2-1-79-balloon__layout{
+    border-radius: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .ymaps-2-1-79-balloon__content ymaps {
+    width: 18rem !important;
+  }
 }
