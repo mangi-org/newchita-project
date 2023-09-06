@@ -1,7 +1,7 @@
 // import React from 'react';
 import './AboutComponent.css'
 
-const AboutComponent = () => {
+function AboutComponent() {
   return (
     <div className='content'>
       <div>
