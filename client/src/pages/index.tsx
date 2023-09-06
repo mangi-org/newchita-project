@@ -17,7 +17,7 @@ function PagesRouter() {
                 <Route path="/about" element={<About />} />
                 <Route path='/about/:aboutId' element={<AboutSingle />} />
                 <Route path='/about/:aboutId/full' element={<AboutSingleFull />} />
-                <Route path='/event' element={<Events />} />
+                <Route path='/events' element={<Events />} />
                 <Route path="*" element={<Error404 />} />
             </Routes>
         </Suspense>
