@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useParams } from "react-router";
 import { useDispatch } from "react-redux";
-import { Head } from "../components";
+import { Head, CardAbout } from "../components";
 import { getSingleAboutProject } from "../axios";
 import { setProject } from "../redux/project";
 import { Map } from "../components";
@@ -20,6 +20,7 @@ function AboutSingle() {
     <>
       <Head title={aboutId} />
       <Map className="-z-10 absolute" />
+      <CardAbout />
     </>
   );
 }
