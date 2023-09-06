@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .ymaps-2-1-79-balloon {

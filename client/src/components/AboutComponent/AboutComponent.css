@@ -1,0 +1,51 @@
+details {
+	color: white;
+	font-size: 22px;
+	background-color: #202020;
+	/* Добавим темный фон */
+	border-radius: 5px;
+	/* Скругляем углы */
+	padding: 1em;
+	/* Добавляем отступ внутри блока */
+	margin-bottom: 1em;
+	/* Добавляем отступ между блоками */
+	transition: 0.2s;
+}
+
+details[open] {
+	background-color: var(--e-global-color-80440d5);
+	/* Смена цвета фона при открытии */
+}
+
+p {
+	margin-top: 1em;
+	margin-left: 1em;
+}
+
+summary {
+	cursor: pointer;
+	/* Изменяем курсор на указатель, чтобы показать, что это кликабельный элемент */
+}
+
+summary:hover {
+	color: var(--e-global-color-80440d5);
+}
+
+details[open]>p {
+	opacity: 0;
+	animation: fadeIn .1s ease-in forwards;
+}
+
+details[open]>summary:hover {
+	color: black;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
