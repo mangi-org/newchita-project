@@ -1,7 +1,23 @@
-details {
-	color: white;
+.content {
+	max-width: 1140px;
+	margin: 2rem auto;
+}
+.content > div {
+	max-width: 600px;
+	margin: 0 auto;
+	margin-bottom: 2em;
+}
+/* h2 {
+	font-weight: bold;
+	font-size: 2em;
+	line-height: 1.2em;
+	margin-bottom: 10px;
+} */
+
+.content details {
+	color: #1d1d1b;
 	font-size: 22px;
-	background-color: #202020;
+	background-color: #f5f5f5;
 	/* Добавим темный фон */
 	border-radius: 5px;
 	/* Скругляем углы */
@@ -12,31 +28,31 @@ details {
 	transition: 0.2s;
 }
 
-details[open] {
-	background-color: var(--e-global-color-80440d5);
+.content details[open] {
+	background-color: #eaeaea;
 	/* Смена цвета фона при открытии */
 }
 
-p {
+.content details>p {
 	margin-top: 1em;
 	margin-left: 1em;
 }
 
-summary {
+.content summary {
 	cursor: pointer;
 	/* Изменяем курсор на указатель, чтобы показать, что это кликабельный элемент */
 }
 
-summary:hover {
-	color: var(--e-global-color-80440d5);
+.content summary:hover {
+	color: #d22115;
 }
 
-details[open]>p {
+.content details[open]>p {
 	opacity: 0;
 	animation: fadeIn .1s ease-in forwards;
 }
 
-details[open]>summary:hover {
+.content details[open]>summary:hover {
 	color: black;
 }
 

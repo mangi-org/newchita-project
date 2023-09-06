@@ -21,6 +21,9 @@ export default {
         },
         "black": {
           "500": "#1d1d1b",
+        },
+        "grey": {
+          "100": "#f5f5f5"
         }
       },
     },
