@@ -4,7 +4,6 @@ import { useDispatch } from "react-redux";
 import { Head } from "../components";
 import { getSingleAboutProject } from "../axios";
 import { setProject } from "../redux/project";
-import { Map } from "../components";
 
 function AboutSingle() {
   const { aboutId } = useParams();
@@ -19,7 +18,7 @@ function AboutSingle() {
   return (
     <>
       <Head title={aboutId} />
-      <Map className="-z-10 absolute" />
+      <h1>{aboutId}</h1>
     </>
   );
 }

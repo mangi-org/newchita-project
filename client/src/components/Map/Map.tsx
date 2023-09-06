@@ -1,14 +1,20 @@
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import StateMapInterface from './interface';
 import { getArrayAboutProject } from '../../axios';
 import BallonCard from './BallonCard';
 import './Map.css'
 
 
-function MapComponent() {
+/**
+ * Renders a map component with markers based on project data.
+ *
+ * @param {React.HTMLAttributes<HTMLDivElement>['className']} className - An optional className for the component.
+ * @return {React.ReactElement} The rendered map component.
+ */
+function MapComponent(props: React.ComponentProps<"div">) {
     const mapRef = useRef<HTMLDivElement>(null);
 
-
+    const resultClassName = props.className ? " "+props.className : '';
     const defaultState: StateMapInterface = {
         center: [52.033635, 113.501049],
         zoom: 15,
@@ -31,7 +37,7 @@ function MapComponent() {
             const map = new ymaps.Map(mapRef.current, defaultState);
             getArrayAboutProject().then(data => {
                 data.forEach((item, index) => {
-                    let smallDescription: string ;
+                    let smallDescription: string;
 
                     if (item.description.length > 100) {
                         smallDescription = item.description.substr(0, 100) + '...';
@@ -58,7 +64,7 @@ function MapComponent() {
                         preset: 'islands#blueCircleDotIconWithCaption',
                         iconColor: item.color,
                     }
-                    const marker = new ymaps.Placemark(positionMarker, contentMarker, styleMarker); 
+                    const marker = new ymaps.Placemark(positionMarker, contentMarker, styleMarker);
                     map.geoObjects.add(marker);
                 })
                 map.setBounds(map.geoObjects.getBounds(), {
@@ -70,7 +76,7 @@ function MapComponent() {
 
     }, []);
 
-    return <div id="map" ref={mapRef} className="w-full min-h-screen"></div>;
+    return <div id="map" ref={mapRef} className={"w-full min-h-screen" + resultClassName}></div>;
 }
 
 export default MapComponent;

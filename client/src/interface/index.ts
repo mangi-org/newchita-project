@@ -1,3 +1,4 @@
 import { SingleChildrenProps } from "./singIterface";
+import { AboutProjectAPI } from "./api";
 
-export type { SingleChildrenProps };
+export type { SingleChildrenProps, AboutProjectAPI };
