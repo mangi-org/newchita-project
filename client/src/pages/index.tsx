@@ -7,6 +7,7 @@ const About = lazy(() => import('./About'));
 const Error404 = lazy(() => import('./Error404'));
 const AboutSingle = lazy(() => import('./AboutSingle'));
 const AboutSingleFull = lazy(() => import('./AboutSingleFull'));
+const Events = lazy(() => import('./Events'));
 
 function PagesRouter() {
     return (
@@ -16,6 +17,7 @@ function PagesRouter() {
                 <Route path="/about" element={<About />} />
                 <Route path='/about/:aboutId' element={<AboutSingle />} />
                 <Route path='/about/:aboutId/full' element={<AboutSingleFull />} />
+                <Route path='/events' element={<Events />} />
                 <Route path="*" element={<Error404 />} />
             </Routes>
         </Suspense>

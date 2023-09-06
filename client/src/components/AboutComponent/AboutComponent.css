@@ -2,17 +2,16 @@
 	max-width: 1140px;
 	margin: 2rem auto;
 }
+@media(max-width:480px) {
+	.content{
+		max-width: 90%;
+	}
+}
 .content > div {
 	max-width: 600px;
 	margin: 0 auto;
 	margin-bottom: 2em;
 }
-/* h2 {
-	font-weight: bold;
-	font-size: 2em;
-	line-height: 1.2em;
-	margin-bottom: 10px;
-} */
 
 .content details {
 	color: #1d1d1b;
