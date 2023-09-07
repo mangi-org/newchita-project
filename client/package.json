@@ -9,7 +9,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "preprod": "vite build --mode production",
-    "prod": "vite preview --mode production --port 3000"
+    "prod": "vite preview --mode production --port 3000 --host"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",

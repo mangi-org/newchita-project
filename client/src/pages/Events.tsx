@@ -1,7 +1,7 @@
 import { Head, EventsComponent } from "../components";
 import { getArrayAboutProject } from "../axios"
 import { AboutProjectAPI } from '../interface';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function ProjectsPage() {
   const [projects, setProjects] = useState<AboutProjectAPI[]>([]);
