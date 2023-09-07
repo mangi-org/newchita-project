@@ -38,6 +38,7 @@ services:
       - "5001:8000"
     volumes:
       - ./server/media:/media
+      - ./server/static:/static
     depends_on:
       - database
 
