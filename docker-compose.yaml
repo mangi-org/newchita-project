@@ -37,8 +37,8 @@ services:
     ports:
       - "5001:8000"
     volumes:
-      - ./server/media:/server/media
-      - ./server/static:/server/static
+      - ./server/media:/media
+      - ./server/static:/static
     depends_on:
       - database
 
