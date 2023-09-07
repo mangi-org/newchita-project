@@ -37,5 +37,5 @@ EXPOSE 8000
 
 CMD ["gunicorn", "--workers", "4", "--timeout", "1000", "server.wsgi:application", "--bind", "0.0.0.0:8000"]
 
-VOLUME [ "/media" ]
-VOLUME [ "/static" ]
+VOLUME [ "./media" ]
+VOLUME [ "./static" ]
