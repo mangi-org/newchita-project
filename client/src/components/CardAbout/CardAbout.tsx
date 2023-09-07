@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux"
 import { RootState } from "../../redux"
 import { Link, useNavigate } from "react-router-dom"
+import { clearMapStorage, detectBgColor } from "../../utils"
 
 function CardAbout() {
 
@@ -13,33 +14,11 @@ function CardAbout() {
         localStorage.removeItem('mapNavigate')
     }
 
-    let bgColor
-
-    switch (project.color){
-        case "#fdba2c":
-            bgColor = 'bg-yellow-500'
-            break;
-        case "#d22115":
-            bgColor = 'bg-red-500'
-            break;
-        case "#9acd32":
-            bgColor = 'bg-green-500';
-            break;
-        case "#a630a2":
-            bgColor = 'bg-fuchsia-500';
-            break;
-        case "#1d1d1b":
-            bgColor = 'bg-black-500';
-            break;
-    }
-
-    const clearMap = () => {
-        localStorage.removeItem('mapNavigate')
-    }
+    const bgColor: string = detectBgColor(String(project.color));
 
     const handleClick = () => {
         navigate('/')
-        clearMap()
+        clearMapStorage()
     }
 
     return (

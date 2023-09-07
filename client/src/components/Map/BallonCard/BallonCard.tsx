@@ -1,37 +1,32 @@
 import BallonCardInterface from "./interface"
 import './BallonCard.css'
+import { colorProject, detectBgColor } from "../../../utils";
 
 function BallonCard({ item }: BallonCardInterface) {
 
 
     let classColorButton: string;
 
-    let bgColor: string;
+    const bgColor: string = detectBgColor(String(item.color));
     
 
     switch (item.color) {
-        case '#d22115':
-            bgColor = 'bg-red-500';
+        case colorProject.Red:
             classColorButton = bgColor+' border-red-500 transition-all hover:text-red-500';
             break;
-        case '#9acd32':
-            bgColor = 'bg-green-500';
+        case colorProject.Green:
             classColorButton = bgColor+' border-green-500 transition-all hover:text-green-500';
             break;
-        case '#fdba2c':
-            bgColor = 'bg-yellow-500';
+        case colorProject.Yellow:
             classColorButton = bgColor+' border-yellow-500 transition-all hover:text-yellow-500';
             break;
-        case '#a630a2':
-            bgColor = 'bg-fuchsia-500';
+        case colorProject.Fuchsia:
             classColorButton = bgColor+' border-fuchsia-500 transition-all hover:text-fuchsia-500';
             break;
-        case '#1d1d1b':
-            bgColor = 'bg-black-500';
+        case colorProject.Black:
             classColorButton = bgColor+' border-black transition-all hover:text-black-500';
             break;
         default:
-            bgColor = 'bg-yellow-500';
             classColorButton = bgColor+' border-yellow-500 transition-all hover:text-yellow-500';
     }
 

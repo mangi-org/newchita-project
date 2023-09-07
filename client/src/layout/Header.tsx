@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { MenuItemInterface } from "./interface"
 import { Link } from "react-router-dom"
+import { clearMapStorage } from "../utils"
 
 const menuLink: MenuItemInterface[] = [
     {
@@ -25,8 +26,7 @@ function Header() {
 
     const [isOpen, setIsOpen] = useState(false)
     const handlerClick = () => {
-        // Clear localstorage
-        localStorage.removeItem('mapNavigate')
+        clearMapStorage()
     }
 
     return (
