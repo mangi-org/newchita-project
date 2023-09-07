@@ -2,6 +2,7 @@ import { useSelector } from "react-redux"
 import { RootState } from "../../redux"
 import { Link, useNavigate } from "react-router-dom"
 import { clearMapStorage, detectBgColor, detectBorderColor } from "../../utils"
+import ReactMarkdown from "react-markdown"
 
 function CardAbout() {
 
@@ -45,7 +46,7 @@ function CardAbout() {
                 <div className="content">
                     <p>{project.address}</p>
                     <hr />
-                    <p>{project.description}</p>
+                    <p><ReactMarkdown>{project.description}</ReactMarkdown></p>
                 </div>
             </div>
         </div>

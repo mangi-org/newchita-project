@@ -149,6 +149,6 @@ function AboutComponent() {
       </div>
     </div>
   );
-};
+}
 
 export default AboutComponent;

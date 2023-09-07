@@ -5,5 +5,6 @@ import AboutComponent from "./AboutComponent";
 import MapCard from "./MapCard";
 import EventsComponent from "./EventsComponent";
 import CardAbout from "./CardAbout";
+import AboutFullComponent from "./AboutFullComponent";
 
-export { Loader, Head, MapComponent as Map, AboutComponent, MapCard, EventsComponent, CardAbout };
+export { Loader, Head, MapComponent as Map, AboutComponent, MapCard, EventsComponent, CardAbout, AboutFullComponent };
