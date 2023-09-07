@@ -13,7 +13,7 @@ function ProjectsPage() {
   }, []);
 
   return (
-    <div className="container mx-auto my-4 px-4" style={{ maxWidth: '1140px' }}>
+    <div className="container mx-auto my-4 px-4">
       <Head title="Достопримечательности Читы" description="Достопримечательности Читы все мероприятия" />
       <div className="flex flex-wrap -mx-4">
         {projects.map((project) => (
