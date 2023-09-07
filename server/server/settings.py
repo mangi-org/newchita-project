@@ -72,6 +72,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'server.urls'
 
+CSRF_TRUSTED_ORIGINS = ["https://newchita.ru", "https://www.newchita.ru"]
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
