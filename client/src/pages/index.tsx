@@ -10,6 +10,7 @@ const AboutSingleFull = lazy(() => import('./AboutSingleFull'));
 const Events = lazy(() => import('./Events'));
 
 function PagesRouter() {
+
     return (
         <Suspense fallback={<Loader />}>
             <Routes>

@@ -9,10 +9,6 @@ const menuLink: MenuItemInterface[] = [
         href: "/"
     },
     {
-        label: "Содержание",
-        href: "/content"
-    },
-    {
         label: "Мероприятия",
         href: "/events"
     },
